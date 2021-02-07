@@ -6,12 +6,18 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
+    "axios": "^0.21.1",
+    "concurrently": "^5.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
+    "serialport": "^9.0.6",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
+    "server": "node ./api/app.js",
+    "client": "react-scripts start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
